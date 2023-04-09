@@ -19,7 +19,7 @@ namespace HeaderLinks{
 
         public getLinks():headerLinkJSX{
             return this.headerLinksArray.map((elem:T):JSX.Element => {
-                return <li className={elem.className} id={elem.id}>{/*<Link to={elem.linkTo}>{elem.linkText}</Link>*/}<a href={elem.linkTo}>{elem.linkText}</a></li>
+                return <li className={elem.className} id={elem.id}><Link to={elem.linkTo}>{elem.linkText}</Link>{/*<a href={elem.linkTo}>{elem.linkText}</a>*/}</li>
             });
         };
     }

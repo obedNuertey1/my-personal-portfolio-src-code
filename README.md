@@ -1,32 +1,8 @@
-# React + TypeScript + Vite + Sass + Cypress Testing Support + Tailwindcss Complete Setup
+# Welcome to my portfolio source code ✋😅
 > # Feel Free to *Fork* this Repository
+> # Note all Software Tests can be located in the directory cypress/compoent
+> # Videos of all tests can be located in the directory cypress/videos
+> # To run the tests convert all Link jsx to anchor tags first ```npx cypress open``` in the cypress window click component testing> click on chrome > click on start testing > inside the browser select the test you want test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-
-## Getting things started
-```npm run dev``` to start the development server and
-```npx cypress open``` to start writing tests
+## To Start the developement server
+```npm run dev```
