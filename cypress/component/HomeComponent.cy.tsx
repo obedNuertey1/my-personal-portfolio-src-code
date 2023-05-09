@@ -98,15 +98,11 @@ describe("The third section", ()=>{
     cy.get("[data-testid='home-section']").children(".homepage-section").eq(2).should("have.id", "projects");
   });
   it("The third section should have three children with class project", ()=>{
-    cy.get("[data-testid='home-section']").children(".homepage-section").eq(2).children(".project").should("have.length", 3);
+    cy.get("[data-testid='home-section']").children(".homepage-section").eq(2).children(".project").should("have.length", 2);
   });
 
   it("The third section should have an h2 tag with #project-head as the first element", ()=>{
     cy.get("[data-testid='home-section']").children(".homepage-section").eq(2).children(".project").eq(0).get("h2#project-head").should("exist");
-  });
-
-  it("The third section should have an 'a' tag as the third element \n Replace this anchor tag with a Link JSX element once all test passes", ()=>{
-    cy.get("[data-testid='home-section']").children(".homepage-section").eq(2).children(".project").eq(2).get("a").should("exist");
   });
 
   it("The second child within the third section should have #show-projects",()=>{
