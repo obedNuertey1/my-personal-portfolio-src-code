@@ -1,3 +1,4 @@
-h1 {
-  font-size: 20px;
+.chat-notification {
+  display: flex;
+  max-width: 24rem;
 }/*# sourceMappingURL=App.css.map */
