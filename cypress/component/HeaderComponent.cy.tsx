@@ -80,7 +80,7 @@ describe("navbar", ()=>{
     cy.get("@ul-children").eq(0).should("contain", "HOME").and("have.attr", "id", "home").and("have.class", "nav-element");
     cy.get("@ul-children").eq(1).should("contain", "ARTICLES").and("have.attr", "id", "articles").and("have.class", "nav-element");
     cy.get("@ul-children").eq(2).should("contain", "PROJECTS").and("have.attr", "id", "projects").and("have.class", "nav-element");
-    cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "work").and("have.class", "nav-element");
+    cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "work").and("have.class", "nav-element'");
   });
 
 });
