@@ -16,6 +16,10 @@ describe('header', () => {
   it("there should be a data-testid", ()=>{
     cy.get("header").should("have.attr", "data-testid", "header");
   });
+
+  it("there should be two children within header with class .header-items", ()=>{
+    cy.get('@testId').children(".header-items").should("have.length", 2);
+  });
 });
 
 describe("profile", ()=>{
@@ -25,11 +29,8 @@ describe("profile", ()=>{
     });
   });
 
-  it("there should be two children within header", ()=>{
-    cy.get('@testId').children(".header-items").should("have.length", 2);
-  });
 
-  it("#profile must have two children", ()=>{
+  it("#profile must have two children with class .avatar-data", ()=>{
     cy.get('@testId').within(()=>{
       cy.get("#profile").children(".avatar-data").should("have.length", 2);
     });
@@ -59,28 +60,28 @@ describe("navbar", ()=>{
 
   it("nav should have a ul tag", ()=>{
     cy.get('@testId').within(()=>{
-      cy.get("nav").child("ul").should("exist");
+      cy.get("nav").children("ul").eq(0).should("exist");
     });
   });
 
-  it("nav ul should have four li items", ()=>{
+  it("nav ul should have four li items with class .links", ()=>{
     cy.get('@testId').within(()=>{
-      cy.get("nav").child("ul").find(".links").should(($links:any):void=>{
-        assert.equal(links.length, 4, "there should be 4 links");
+      cy.get("nav").children("ul").eq(0).find(".links").should(($links:any):void=>{
+        assert.equal($links.length, 4, "there should be 4 links");
       });
     });
   });
 
-  it("nav ul li must have the texts HOME ARTICLES PROJECTS WORK in that order", ()=>{
+  it("nav ul li must have the texts with a class of links 'HOME, ARTICLES, PROJECTS, WORK' in that order and must contain ids which matches them in lowercase", ()=>{
     cy.get('@testId').within(()=>{
       cy.get("nav").within(()=>{
         cy.get("ul").children("li").as("ul-children");
       });
+      cy.get("@ul-children").eq(0).contains("HOME").and("have.attr", "id", "home").and("have.class", "links");
+      cy.get("@ul-children").eq(1).should("contain", "ARTICLES").and("have.attr", "id", "articles").and("have.class", "links");
+      cy.get("@ul-children").eq(2).should("contain", "PROJECTS").and("have.attr", "id", "projects").and("have.class", "links");
+      cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "work").and("have.class", "links");
     });
-    cy.get("@ul-children").eq(0).should("contain", "HOME").and("have.attr", "id", "home").and("have.class", "nav-element");
-    cy.get("@ul-children").eq(1).should("contain", "ARTICLES").and("have.attr", "id", "articles").and("have.class", "nav-element");
-    cy.get("@ul-children").eq(2).should("contain", "PROJECTS").and("have.attr", "id", "projects").and("have.class", "nav-element");
-    cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "work").and("have.class", "nav-element");
   });
 
 });
