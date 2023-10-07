@@ -3,7 +3,7 @@ import HeaderLinks from "../namespaces/HeaderLinks";
 export default ({className}:any):JSX.Element => {
 
     const headerLinksArray:HeaderLinks.IheaderLink<string, string>[] = [
-        {className, id:"home", linkText:"HOME", linkTo:"home"},
+        {className, id:"home", linkText:"HOME", linkTo:"/"},
         {className, id:"articles", linkText:"ARTICLES", linkTo:"articles"},
         {className, id:"projects", linkText:"PROJECTS", linkTo:"projects"},
         {className, id:"work", linkText:"WORK", linkTo:"work"}

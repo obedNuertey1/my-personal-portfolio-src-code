@@ -1,11 +1,8 @@
-import './App.css'
+// import './App.css'
+import Routes from "./Routes";
 
 const App = ():JSX.Element => {
-  return (
-    <div className='card rounded-none'>
-      Sample tailwind demonstration
-    </div>
-  );
+  return (<Routes />);
 };
 
 export default App;

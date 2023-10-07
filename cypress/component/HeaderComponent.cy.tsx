@@ -72,12 +72,12 @@ describe("navbar", ()=>{
     });
   });
 
-  it("nav ul li must have the texts with a class of links 'HOME, ARTICLES, PROJECTS, WORK' in that order and must contain ids which matches them in lowercase", ()=>{
+  it("nav ul li must have the texts with a class of links 'HOME, ARTICLES, PROJECTS, WORK' in that order and must contain ids which matches them in lowercase \n\n NB: To Avoid errors, use anchor tag instead \n after styling the header, \n replace the anchor tag with \n the 'Link' tag", ()=>{
     cy.get('@testId').within(()=>{
       cy.get("nav").within(()=>{
         cy.get("ul").children("li").as("ul-children");
       });
-      cy.get("@ul-children").eq(0).contains("HOME").and("have.attr", "id", "home").and("have.class", "links");
+      cy.get("@ul-children").eq(0).should("contain", "HOME").and("have.attr", "id", "home").and("have.class", "links");
       cy.get("@ul-children").eq(1).should("contain", "ARTICLES").and("have.attr", "id", "articles").and("have.class", "links");
       cy.get("@ul-children").eq(2).should("contain", "PROJECTS").and("have.attr", "id", "projects").and("have.class", "links");
       cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "work").and("have.class", "links");
