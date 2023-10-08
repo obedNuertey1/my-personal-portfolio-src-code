@@ -4,10 +4,10 @@ import largeAvatarImg from "../assets/images/large/Hacker-PNG-Image_2.png";
 export default ():JSX.Element => {
     return(
         <>
-        <div className="fixed top-0 w-full z-10 bg-white shadow-md">
+        <div className="fixed top-0 w-full z-10 bg-white shadow-md text-sm">
             <header data-testid="header" className=" flex justify-between items-center w-full max-w-5xl mx-auto px-3">
                 <div className="header-items flex items-center justify-center" id="profile">
-                    <div id="avatar" className="avatar-data w-16 object-cover inline-block border-gray-700 border-spacing-0 p-0 border-solid rounded-full">
+                    <div id="avatar" className="avatar-data w-12 object-cover inline-block border-gray-700 border-spacing-0 p-0 border-solid rounded-full">
                         <img className="w-full" src={largeAvatarImg} alt="avatar" />
                     </div>
                     <div className="avatar-data flex justify-center items-center h-16">
@@ -16,10 +16,6 @@ export default ():JSX.Element => {
                 </div>
                 <nav className="header-items hidden sm:flex sm:justify-center sm:items-center">
                     <ul className="flex gap-4">
-                        {/* <li className="links" id="home">HOME</li>
-                        <li className="links" id="articles">ARTICLES</li>
-                        <li className="links" id="projects">PROJECTS</li>
-                        <li className="links" id="work">WORK</li> */}
                         <HeaderNavLinks className="links font-extrabold font-lato align-middle" />
                     </ul>
                 </nav>

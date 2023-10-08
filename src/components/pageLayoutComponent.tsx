@@ -6,7 +6,7 @@ export default ():JSX.Element=>{
     return (
         <>
             < HeaderComponent />
-                <main className="mt-20 mx-auto font-tahoma max-w-[80ch] py-12 fade-in px-4">
+                <main className="mt-20 mx-auto font-tahoma max-w-[80ch] py-4 fade-in px-4">
                     <Outlet />
                 </main>
             <FooterComponent />
