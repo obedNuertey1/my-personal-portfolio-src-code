@@ -2,16 +2,16 @@ namespace PageDescriber{
 
     // I want to make the className loosely coupled
     export interface IcssClass<S>{
-        introduction: S;
-        introHeading: S;
-        introBody: S;
+        introduction?: S;
+        introHeading?: S;
+        introBody?: S;
     };
 
     export interface IcssId extends IcssClass<string>{}; //I want to make the id attribute loosely coupled
 
     export interface IpageDescriber<T>{
-        heading: T;
-        paragraph: T;
+        heading?: T;
+        paragraph?: T;
         className: IcssClass<string>; //I want to make the className loosely coupled to allow for flexibility using tailwindcss
         id: IcssId;
     };
