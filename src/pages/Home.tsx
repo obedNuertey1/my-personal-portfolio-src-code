@@ -1,15 +1,16 @@
 import HomepageDescription from "../components/partials/homepageDescription";
 import PageDescriber from "../components/namespaces/PageDescriber";
+// import ShowArticles from "../components/partials/showArticles";
 
 export default ():JSX.Element =>{
 
-    const className:PageDescriber.IcssClass<string> = {
+    const homeDescClassName:PageDescriber.IcssClass<string> = {
         introduction: "homepage-section",
         introHeading: "intro-children",
         introBody: "intro-children"
     };
 
-    const id:PageDescriber.IcssId = {
+    const homeDescId:PageDescriber.IcssId = {
         introduction: "introduction",
         introHeading: "intro-heading",
         introBody: "intro-body"
@@ -18,7 +19,7 @@ export default ():JSX.Element =>{
     return (
         <>
             <div data-testid="home-section">
-                <HomepageDescription className={className} id={id} />
+                <HomepageDescription className={homeDescClassName} id={homeDescId} />
                 <section id="article" className="homepage-section">
                     <h2 id="article-header" className="article-section">RECENT ARTICLES</h2>
                     <div id="article-body" className="article-section">

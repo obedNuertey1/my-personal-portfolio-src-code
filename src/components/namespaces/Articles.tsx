@@ -1,14 +1,22 @@
 namespace Articles {
 
-    export interface IcssId<S>{
+    // export interface IcssId<S>{
+    //     parent: S;
+    //     articleTime: S;
+    //     articleTopic: S;
+    // }
+
+    // export interface IcssClass extends IcssId<string>{};
+
+    export interface IcssClass<S>{
         parent: S;
         articleTime: S;
         articleTopic: S;
-    }
+    };
 
-    export interface IcssClass extends IcssId<string>{};
+    export interface IcssId extends Omit<IcssClass<string>, "parent">{};
 
-    export interface Iarticle<S, U extends IcssId<string>, T extends IcssClass>{
+    export interface Iarticle<S, U extends IcssId, T extends IcssClass<string>>{
         time?: S;
         $h3?: S;
         id: U;
@@ -18,7 +26,7 @@ namespace Articles {
 
     export type articleJSX = JSX.Element[];
 
-    export class ArticlesClass<U extends Iarticle<string, IcssId<string>, IcssClass>>{
+    export class ArticlesClass<U extends Iarticle<string, IcssId, IcssClass<string>>>{
         private articlesArray: U[];
 
         constructor(articlesArray:U[]){
