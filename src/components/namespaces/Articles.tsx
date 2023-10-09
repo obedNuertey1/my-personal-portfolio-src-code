@@ -13,6 +13,7 @@ namespace Articles {
         $h3?: S;
         id: U;
         className: T;
+        $href?: S;
     };
 
     export type articleJSX = JSX.Element[];
@@ -30,7 +31,7 @@ namespace Articles {
                     <>
                         <article className={elem.className.parent}>
                             <time id={elem.id.articleTime} className={elem.className.articleTime}>{elem.time}</time>
-                            <h3 id={elem.id.articleTopic} className={elem.className.articleTopic}>{elem.$h3}</h3>
+                            <h3 id={elem.id.articleTopic} className={elem.className.articleTopic}><a href={elem.$href} target="_blank">{elem.$h3}</a></h3>
                         </article>
                     </>
                 );
