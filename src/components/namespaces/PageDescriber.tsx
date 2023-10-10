@@ -26,8 +26,8 @@ namespace PageDescriber{
         public getPageDescription():JSX.Element{
             return (
                 <section id={this.pageDescriberObj.id.introduction} className={this.pageDescriberObj.className.introduction}>
-                    <h2 id={this.pageDescriberObj.id.introHeading} className={this.pageDescriberObj.className.introHeading}>{this.pageDescriberObj.heading}</h2>
-                    <p id={this.pageDescriberObj.id.introBody} className={this.pageDescriberObj.className.introHeading}>{this.pageDescriberObj.paragraph}</p>
+                    <h1 id={this.pageDescriberObj.id.introHeading} className={this.pageDescriberObj.className.introHeading}>{this.pageDescriberObj.heading}</h1>
+                    <h2 id={this.pageDescriberObj.id.introBody} className={this.pageDescriberObj.className.introBody}>{this.pageDescriberObj.paragraph}</h2>
                 </section>
             );
         };

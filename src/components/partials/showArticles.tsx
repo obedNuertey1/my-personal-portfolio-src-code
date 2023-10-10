@@ -1,16 +1,29 @@
 import Articles from "../namespaces/Articles";
 
-export default ({className, id}:Articles.Iarticle<string, Articles.IcssId<string>, Articles.IcssClass>):JSX.Element => {
-    const myArticles:Articles.Iarticle<string, Articles.IcssClass, Articles.IcssId<string>>[] = [
-        {className, id, time: "10/4/2022", $h3: "Interesting AI Articles & Links"},
-        {className, id, time: "10/4/2022", $h3: "Interesting AI Articles & Links"},
-    ];
+export default ({articlesArr}:any):JSX.Element => {
+    const className = {
+        parent: "sample-article block mb-12",
+        articleTime: "article-elem font-serif italic font-medium text-gray-600",
+        articleTopic: "article-elem text-3xl font-bold"
+    };
 
-    const articlesInstance = new Articles.ArticlesClass<Articles.Iarticle<string, Articles.IcssId<string>, Articles.IcssClass>>(myArticles);
+    const id = {
+        articleTime: "article-time",
+        articleTopic: "article-topic",
+    }
+
+    const myArticles:Articles.Iarticle<string, Articles.IcssId, Articles.IcssClass<string>>[] = articlesArr.map((elem:any)=>{
+        elem["className"] = className;
+        elem["id"] = id;
+        return elem;
+    });
+
+    const articlesInstance = new Articles.ArticlesClass<Articles.Iarticle<string, Articles.IcssId ,Articles.IcssClass<string>>>(myArticles);
+    const articles:Articles.articleJSX = articlesInstance.getArticles(); 
 
     return (
         <>
-            {articlesInstance}
+            {articles}
         </>
     );
 };

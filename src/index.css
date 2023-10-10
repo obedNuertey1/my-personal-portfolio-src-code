@@ -17,4 +17,37 @@
     font-family: "Monoton", sans-serif;
   }
 }
-@layer base {}/*# sourceMappingURL=index.css.map */
+@layer base {
+  body {
+    @apply text-gray-700;
+    scroll-padding-right: 10px;
+  }
+  .current-projects {
+    display: inline-block;
+  }
+  iframe {
+    transform-origin: 0% 50%;
+    width: 500px;
+    height: 550px;
+    transform: scale(0.75);
+  }
+  #projects {
+    cursor: crosshair;
+  }
+  @media (max-width: 750px) {
+    iframe {
+      width: 590px;
+      height: 700px;
+      transform: scaleX(0.58) scaleY(0.8);
+      gap: -8px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    #show-projects {
+      height: 720px;
+    }
+    #home-section {
+      overflow: hidde;
+    }
+  }
+}/*# sourceMappingURL=index.css.map */

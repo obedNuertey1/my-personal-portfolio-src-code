@@ -15,6 +15,15 @@ export default {
         "nunito": "Nunito, sans-serif",
         "verdana": "Verdana, Geneva, Tahoma, sans-serif"
         // "monoton": "'Monoton', sans-serif"
+      },
+      fontSize:{
+        "xxs": "0.75rem"
+      },
+      width:{
+        w430: "430px",
+      },
+      height:{
+        w467: "467px",
       }
     },
   },

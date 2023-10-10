@@ -12,9 +12,9 @@ export default ():JSX.Element=>{
             <Routes>
                 <Route path="/" element={<PageLayoutComponent/>}>
                     <Route index element={<Home />} />
-                    <Route path={'/articles'} element={<Articles />}/>
-                    <Route path={'/projects'} element={<Projects />}/>
-                    <Route path={'/work'} element={<Work />} />
+                    <Route path={'/articles/'} element={<Articles />}/>
+                    <Route path={'/projects/'} element={<Projects />}/>
+                    <Route path={'/work/'} element={<Work />} />
                 </Route>
             </Routes>
         </>

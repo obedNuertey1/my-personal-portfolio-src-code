@@ -1,23 +1,23 @@
 import PageDescriber from "../namespaces/PageDescriber";
 
-export default ():JSX.Element => {
-    const className:PageDescriber.IcssClass<string> = {
-        introduction: "homepage-section",
-        introHeading: "intro-children",
-        introBody: "intro-children"
+export default ({heading, paragraph, cssSectionClass, cssSectionId}:any):JSX.Element => {
+    const className = {
+        introduction: cssSectionClass+" py-24",
+        introHeading: "intro-children text-4xl mb-4 font-bold",
+        introBody: "intro-children font-serif italic text-2xl"
     };
 
     const id:PageDescriber.IcssId = {
-        introduction: "introduction",
+        introduction: cssSectionId,
         introHeading: "intro-heading",
         introBody: "intro-body"
     };
 
     const description:PageDescriber.IpageDescriber<string> = {
-        heading: "Hello, my name is Obed.",
-        paragraph: "I am a Software Engineer based in Accra, Ghana. Currently I'm working on some personal projects",
-        className: className,
-        id: id
+        heading,
+        paragraph,
+        className,
+        id
     };
 
     const pageDescriberInstance = new PageDescriber.PageDescriberClass<PageDescriber.IpageDescriber<string>>(description);
