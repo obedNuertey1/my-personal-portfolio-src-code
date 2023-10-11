@@ -1,5 +1,13 @@
 import PageIntroDescription from "../components/partials/pageDescription";
+import { useEffect } from "react";
 export default ():JSX.Element =>{
+
+    useEffect(()=>{
+        // reset the scroll position to the top when leaving the page
+        return ()=>{
+            window.scrollTo(0, 0);
+        };
+    });
     
     const intro:any = {
         heading: "Work",

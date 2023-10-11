@@ -3,8 +3,16 @@ import ShowArticles from "../components/partials/showArticles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default ():JSX.Element =>{
+
+    useEffect(()=>{
+        // reset the scroll to the top when leaving the page
+        return ()=>{
+            window.scrollTo(0, 0)
+        };
+    }, []);
 
     const intro:any = {
         heading: "Hello, my name is Obed.",

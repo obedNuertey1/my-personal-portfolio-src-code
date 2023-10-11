@@ -1,7 +1,16 @@
 import PageIntroDescription from "../components/partials/pageDescription";
 import ShowArticles from "../components/partials/showArticles";
+import { useEffect } from "react";
 
 export default ():JSX.Element => {
+
+    useEffect(() => {
+        // Reset scroll position to the top when leaving the page
+        return () => {
+          window.scrollTo(0, 0);
+        };
+      }, []);
+
     const heading:any = "Blog Posts";
     const paragraph:any = "Essays, learning, and other miscellaneous goodies";
 
