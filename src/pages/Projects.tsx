@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import PageIntroDescription from "../components/partials/pageDescription";
+
 export default ():JSX.Element => {
 
     useEffect(()=>{
@@ -10,7 +12,17 @@ export default ():JSX.Element => {
 
     return (
         <>
-            <h1>This is the Projects Page</h1>
+            <div data-testid="projects" id="projects">
+                <PageIntroDescription cssSectionClass="project-section" cssSectionId="" />
+                <section className="project-section" id="projects-repo">
+                    <figure className="project-card">
+                        <div className="image-container">
+                            <img src="" alt="" />
+                        </div>
+                        <figcaption className="image-caption"></figcaption>
+                    </figure>
+                </section>
+            </div>
         </>
     );
 };
