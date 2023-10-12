@@ -26,7 +26,7 @@
 @layer base{
   body{
     // overflow: hidden;
-    @apply text-gray-700;
+    @apply text-gray-700 selection:bg-slate-900 selection:text-white;
     scroll-padding-right: 10px;
   }
   .current-projects{

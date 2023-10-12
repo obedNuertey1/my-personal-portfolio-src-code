@@ -1,13 +1,4 @@
 namespace Articles {
-
-    // export interface IcssId<S>{
-    //     parent: S;
-    //     articleTime: S;
-    //     articleTopic: S;
-    // }
-
-    // export interface IcssClass extends IcssId<string>{};
-
     export interface IcssClass<S>{
         parent: S;
         articleTime: S;
