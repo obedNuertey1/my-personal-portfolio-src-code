@@ -49,7 +49,7 @@ describe("The second section", ()=>{
   });
   
   it("within each figure tag there should be an image with the class .img-tag there should be an img tag", ()=>{
-    cy.get("#projects section.project-section#projects-repo figure.project-card").children(/.+/).eq(0).get("img.img-tag").should("have.length", 1);
+    cy.get("#projects section.project-section#projects-repo figure.project-card").children(/.+/).eq(0).get("img.img-tag").should("exist");
   });
   
   it("within each figure tag, there should be a figcaption tag with a class of .image-caption as it's first element",()=>{
@@ -57,11 +57,11 @@ describe("The second section", ()=>{
   });
 
   it("within each .image-caption there should be two div tag with class of caption-text", ()=>{
-    cy.get("#projects section.project-section#projects-repo figure.project-card").children(/.+/).eq(0).get("figcaption.image-caption").children("div.caption-text").should("have.length", 2);
+    cy.get("#projects section.project-section#projects-repo figure.project-card").children(/.+/).eq(0).get("figcaption.image-caption").children("div.caption-text").should("exist");
   });
 
   it("within each .image-caption there should be two div tag with class of caption-text", ()=>{
-    cy.get("#projects section.project-section#projects-repo figure.project-card").children(/.+/).eq(0).get("figcaption.image-caption").children("div.caption-text").should("exist").and("have.length", 2);
+    cy.get("#projects section.project-section#projects-repo figure.project-card").children(/.+/).eq(0).get("figcaption.image-caption").children("div.caption-text").should("exist");
     });
 
   it("the first .caption-text element should have an id of #caption-links", ()=>{

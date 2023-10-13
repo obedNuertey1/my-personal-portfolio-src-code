@@ -4,7 +4,7 @@ export default ({articlesArr}:any):JSX.Element => {
     const className = {
         parent: "sample-article block mb-12",
         articleTime: "article-elem font-serif italic font-medium text-gray-600",
-        articleTopic: "article-elem text-3xl font-bold"
+        articleTopic: "article-elem text-2xl font-bold"
     };
 
     const id = {

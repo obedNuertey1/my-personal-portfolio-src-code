@@ -1,13 +1,16 @@
 import PageIntroDescription from "../components/partials/pageDescription";
 import ShowArticles from "../components/partials/showArticles";
 import { useEffect } from "react";
+import $ from "jquery";
 
 export default ():JSX.Element => {
 
     useEffect(() => {
-        // Reset scroll position to the top when leaving the page
-        return () => {
-          window.scrollTo(0, 0);
+        $("#articles").addClass("clicked");
+        // reset the scroll position to the top when leaving the page
+        return ()=>{
+            $("#articles").removeClass("clicked");
+            window.scrollTo(0, 0);
         };
       }, []);
 
@@ -26,7 +29,7 @@ export default ():JSX.Element => {
 
     return (
         <>
-            <div data-testid="articles" id="articles">
+            <div data-testid="articles" id="articles" className="page">
                 <PageIntroDescription cssSectionClass="article-section" cssSectionId="" heading={heading} paragraph={paragraph} />
                 <section className="article-section">
                     <ShowArticles articlesArr={articles} />

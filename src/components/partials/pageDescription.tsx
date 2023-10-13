@@ -2,9 +2,9 @@ import PageDescriber from "../namespaces/PageDescriber";
 
 export default ({heading, paragraph, cssSectionClass, cssSectionId}:any):JSX.Element => {
     const className = {
-        introduction: cssSectionClass+" py-24",
-        introHeading: "intro-children text-4xl mb-4 font-bold",
-        introBody: "intro-children font-serif italic text-2xl"
+        introduction: cssSectionClass+" py-24 animate-show",
+        introHeading: "intro-children text-3xl mb-4 font-bold",
+        introBody: "intro-children font-serif italic text-xl"
     };
 
     const id:PageDescriber.IcssId = {

@@ -1,8 +1,90 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .clicked::after {
+    @apply bg-gray-500;
+    content: "";
+    z-index: 3;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 100%;
+    bottom: 0;
+    left: 50%;
+  }
+  .oblivion {
+    transform-origin: 50% 50%;
+    animation-name: scalein;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+  }
+  @keyframes scalein {
+    0% {
+      opacity: 0;
+      transform: scale(1.3);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .page {
+    animation-name: pageshow;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+  }
+  @keyframes pageshow {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .animate-show {
+    animation-name: show;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+  }
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: translate(0, 15px);
+    }
+    75% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  .flip {
+    transform-origin: 50% 0%;
+    animation-name: flipanime;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+  }
+  @keyframes flipanime {
+    0% {
+      opacity: 0;
+      transform: rotate3d(0, 1, 0, 90deg) scaleX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate3d(0, 1, -90deg) scaleX(1);
+    }
+  }
+}
 @layer components {
   .card {
     @apply flex items-center justify-center;
@@ -49,5 +131,38 @@
     #home-section {
       overflow: hidde;
     }
+  }
+  .caption-link a::before, .caption-link a::after {
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+  }
+  .caption-link:nth-of-type(1) a::before {
+    content: "< ";
+    color: transparent;
+  }
+  .caption-link:nth-of-type(1) a::after {
+    content: " />";
+    color: transparent;
+  }
+  .caption-link:nth-of-type(1) a:hover::before {
+    color: orangered;
+  }
+  .caption-link:nth-of-type(1) a:hover::after {
+    color: orangered;
+  }
+  .caption-link:nth-of-type(2) a::before {
+    content: "🕸";
+    color: transparent;
+  }
+  .caption-link:nth-of-type(2) a::after {
+    content: "🕸";
+    color: transparent;
+  }
+  .caption-link:nth-of-type(2) a:hover::before {
+    color: orangered;
+  }
+  .caption-link:nth-of-type(2) a:hover::after {
+    color: orangered;
   }
 }/*# sourceMappingURL=index.css.map */

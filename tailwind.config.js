@@ -24,8 +24,11 @@ export default {
       },
       height:{
         w467: "467px",
+      },
+      maxWidth:{
+        w100: "390px"
       }
-    },
+    }
   },
   plugins: [],
 }

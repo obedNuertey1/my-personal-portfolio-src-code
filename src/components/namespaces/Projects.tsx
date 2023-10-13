@@ -42,7 +42,7 @@ namespace Projects{
         public getProjects():projectJSX{
             return this.projectsArray.map((elem:V):JSX.Element => {
                 return (
-                    <figure className={elem.className.figure}>
+                    <figure className={elem.className.figure} >
                         <img className={elem.className.img} src={elem.image.src} alt={elem.image.alt} loading="lazy" />
                         <figcaption className={elem.className.figcaption}>
                             <div className={elem.className.captionLinks} id={elem.id.captionLinks}>

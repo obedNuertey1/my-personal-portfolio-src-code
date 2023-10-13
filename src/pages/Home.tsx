@@ -3,14 +3,21 @@ import ShowArticles from "../components/partials/showArticles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import $ from "jquery";
 
 export default ():JSX.Element =>{
 
+    const [scrollPosition, setScrollPosition]:any = useState(0);
+
     useEffect(()=>{
-        // reset the scroll to the top when leaving the page
+        setScrollPosition(window.scrollX);
+        console.log(scrollPosition);
+        $("#home").addClass("clicked");
+        // reset the scroll position to the top when leaving the page
         return ()=>{
-            window.scrollTo(0, 0)
+            $("#home").removeClass("clicked");
+            window.scrollTo(0, 0);
         };
     }, []);
 
@@ -26,7 +33,7 @@ export default ():JSX.Element =>{
 
     return (
         <>
-            <div data-testid="home-section" id="home-section">
+            <div data-testid="home-section" id="home-section" className="page">
                 <PageIntroDescription cssSectionClass="homepage-section" cssSectionId="introduction" heading={intro.heading} paragraph={intro.paragraph} />
                 <section id="article" className="homepage-section pb-12">
                     <h2 id="article-header" className="article-section text-sm mb-12 font-bold text-blue-900">RECENT ARTICLES</h2>
@@ -37,7 +44,7 @@ export default ():JSX.Element =>{
                 </section>
                 <section id="projects" className="homepage-section pt-12">
                     <h2 className="project" id="project-head"></h2>
-                    <div id="show-projects" className="project flex flex-col sm:flex-row overflow-y-auto sm:overflow-x-auto">
+                    <div id="show-projects" className="project flex flex-col sm:flex-row overflow-y-auto sm:overflow-x-auto max-w-w100 mx-auto">
                         <div className="current-projects">
                             <iframe  className="rounded-md shadow-md" src="https://merry-creponne-b3b2ec.netlify.app/" title="my-cats" allowFullScreen frameBorder={0} sandbox="allow-same-origin allow-scripts"></iframe>
                         </div>
