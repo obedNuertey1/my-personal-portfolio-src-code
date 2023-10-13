@@ -8,6 +8,20 @@
 
 @layer utilities{
 
+  .iframe-nav{
+    width: auto;
+    transition: width 3000ms;
+  }
+
+  .iframe-nav:hover{
+    width: 100px;
+    cursor: pointer;
+  }
+
+  .iframe-nav:active{
+    @apply bg-gray-600 text-white
+  }
+
   .clicked::after{
     @apply bg-gray-500;
     content: "";
@@ -23,15 +37,16 @@
   .oblivion{
     transform-origin: 50% 50%;
     animation-name: scalein;
-    animation-duration: 1000ms;
+    animation-duration: 500ms;
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
   }
 
+
   @keyframes scalein {
     0%{
       opacity: 0;
-      transform: scale(1.3);
+      transform: scale(1.5);
 
     }
     100%{
@@ -129,11 +144,9 @@
     width: 500px;
     height: 550px;
     transform: scale(0.75);
-  }
-
-  #projects{
     cursor: crosshair;
   }
+
   @media (max-width: 750px){
     iframe{
       width: 590px;
