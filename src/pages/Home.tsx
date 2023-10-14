@@ -5,6 +5,7 @@ import { faArrowRight, faArrowCircleLeft, faArrowCircleRight } from "@fortawesom
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import $ from "jquery";
+import { Helmet } from "react-helmet";
 
 function handleRightIframeNav():void{
     let iframeWrapper:any = document.getElementById("show-projects");
@@ -57,7 +58,7 @@ export default ():JSX.Element =>{
 
     useEffect(()=>{
         $("#home").addClass("clicked");
-        // reset the scroll position to the top when leaving the page
+        // reset the scroll position to the top when leaving this page
         return ()=>{
             $("#home").removeClass("clicked");
             window.scrollTo(0, 0);
@@ -67,6 +68,9 @@ export default ():JSX.Element =>{
 
     return (
         <>
+            <Helmet>
+                <title>Obed | Home</title>
+            </Helmet>
             <div data-testid="home-section" id="home-section" className="page">
                 <PageIntroDescription cssSectionClass="homepage-section" cssSectionId="introduction" heading={intro.heading} paragraph={intro.paragraph} />
                 <SecondSectionComponent articles={articles} />

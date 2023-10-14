@@ -9,6 +9,7 @@
 @layer utilities{
 
   .descendants:nth-of-type(2){
+    transform-origin: 50% 50%;
     animation: pulsy 1s linear 0s infinite alternate none;
   }
 

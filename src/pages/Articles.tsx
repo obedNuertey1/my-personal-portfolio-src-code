@@ -2,12 +2,13 @@ import PageIntroDescription from "../components/partials/pageDescription";
 import ShowArticles from "../components/partials/showArticles";
 import { useEffect } from "react";
 import $ from "jquery";
+import {Helmet} from "react-helmet";
 
 export default ():JSX.Element => {
 
     useEffect(() => {
         $("#articles").addClass("clicked");
-        // reset the scroll position to the top when leaving the page
+        // reset the scroll position to the top when leaving this page
         return ()=>{
             $("#articles").removeClass("clicked");
             window.scrollTo(0, 0);
@@ -30,6 +31,9 @@ export default ():JSX.Element => {
 
     return (
         <>
+            <Helmet>
+                <title>Obed | Articles</title>
+            </Helmet>
             <div data-testid="articles" id="articles" className="page">
                 <PageIntroDescription cssSectionClass="article-section" cssSectionId="" heading={heading} paragraph={paragraph} />
                 <section className="article-section">
