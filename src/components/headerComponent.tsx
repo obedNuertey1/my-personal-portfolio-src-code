@@ -16,7 +16,7 @@ export default ():JSX.Element => {
                 </div>
                 <nav className="header-items hidden sm:flex sm:justify-center sm:items-center">
                     <ul className="flex gap-4">
-                        <HeaderNavLinks className="links font-extrabold font-lato align-middle relative py-0.5" />
+                        <HeaderNavLinks className="links font-extrabold font-lato align-middle relative py-2" />
                     </ul>
                 </nav>
             </header>

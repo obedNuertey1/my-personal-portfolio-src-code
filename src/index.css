@@ -5,6 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+  .descendants:nth-of-type(2) {
+    animation: pulsy 1s linear 0s infinite alternate none;
+  }
+  @keyframes pulsy {
+    0% {
+      opacity: 1;
+      scale: 0.9;
+    }
+    100% {
+      opacity: 0.6;
+      scale: 1;
+    }
+  }
   @media (prefers-reduced-motion: no-preference) {
     #show-projects {
       scroll-behavior: smooth;
