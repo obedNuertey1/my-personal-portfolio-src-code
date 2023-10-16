@@ -5,9 +5,52 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+  .loading-text {
+    animation: loadingText 6s linear 0s 1;
+  }
+  .second-splash {
+    transform-origin: 50% 50%;
+    animation: animateColor 1s linear 0s 1;
+  }
+  .typist {
+    animation: showTypist 1500ms ease-in 0s 1;
+  }
+  @keyframes loadingText {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes showTypist {
+    0% {
+      transform: translateY(80px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(80px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px);
+      opacity: 1;
+    }
+  }
   @keyframes animateColor {
     0% {
-      background: radial-gradient();
+      transform: scale(0);
+      border-radius: 100%;
+    }
+    100% {
+      transform: scale(1);
+      border-radius: 0%;
     }
   }
   .loading-text {
