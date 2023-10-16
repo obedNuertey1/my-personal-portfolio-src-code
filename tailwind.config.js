@@ -27,6 +27,9 @@ export default {
       },
       maxWidth:{
         w100: "390px"
+      },
+      minHeight:{
+        h45: "45px"
       }
     }
   },

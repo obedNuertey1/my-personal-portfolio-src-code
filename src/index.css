@@ -5,8 +5,23 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+  @keyframes animateColor {
+    0% {
+      background: radial-gradient();
+    }
+  }
+  .loading-text {
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    right: 40%;
+  }
   .descendants:nth-of-type(2) {
+    transform-origin: 50% 50%;
     animation: pulsy 1s linear 0s infinite alternate none;
+  }
+  .descendants:nth-of-type(3) {
+    filter: saturate(60);
   }
   @keyframes pulsy {
     0% {
@@ -14,7 +29,7 @@
       scale: 0.9;
     }
     100% {
-      opacity: 0.6;
+      opacity: 0.4;
       scale: 1;
     }
   }

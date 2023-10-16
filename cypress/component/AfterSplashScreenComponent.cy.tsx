@@ -23,8 +23,8 @@ describe("The imediate child", ()=>{
     cy.get("#second-splash-child").should("exist");
   });
   it("should have a child blockquote#typist", ()=>{
-    cy.get("#second-splash").within(()=>{
-      cy.get("blockquote#typist").shoul("exist");
+    cy.get("#second-splash-child").within(()=>{
+      cy.get("blockquote#typist").should("exist");
     });
   });
 });
