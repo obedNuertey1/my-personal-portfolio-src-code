@@ -8,6 +8,106 @@
 
 @layer utilities{
 
+  .clicked::after{
+    @apply bg-gray-500;
+    content: "";
+    z-index: 3 ;
+    width: 5px ;
+    height: 5px ;
+    position: absolute ;
+    border-radius: 100% ;
+    bottom: 0 ;
+    left: 50% ;
+  }
+
+
+  #yellow-page-text{
+    display: block;
+    animation: yellowPageText 4000ms ease-in-out 0s infinite;
+  };
+
+  .phone-nav{
+    display: hidden;
+  }
+
+  @media screen and (max-width: 640px){
+
+    footer{
+      @apply mb-7;
+    }
+    .phone-nav{
+      box-shadow: 0px -1px 10px -3px; 
+      @apply shadow-inherit;
+      animation: animate-phone-nav 3000ms ease-in 0s 1;
+    }
+
+    @keyframes animate-phone-nav {
+      0%{
+        transform: translateY(140px);
+      }
+      50%{
+        transform: translateY(140px);
+      }
+      100%{
+        transform: translateY(0px); 
+      }
+    }
+    .header-wrapper{
+      @apply shadow-none;
+    }
+
+    .phone-nav-icon{
+      @apply text-center;
+    }
+
+
+    .phone-nav-clicked::after{
+      @apply bg-gray-700 rounded-full overflow-hidden;
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      animation: animate-phone-button 1000ms linear 0s 1;
+    }
+
+    .phone-nav-shows::after{
+      @apply bg-gray-700 rounded-full overflow-hidden;
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  
+    @keyframes animate-phone-button {
+      0%{
+        width: 0%;
+      }
+      100%{
+        width: 100%;
+      }
+    }
+    
+  }
+
+
+  @keyframes yellowPageText {
+    0%{
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    50%{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(50%);
+      opacity: 0;
+    }
+  }
+
   .loading-text{
     animation: loadingText 6s linear 0s 1;
   }
@@ -119,17 +219,6 @@
     @apply bg-gray-600 text-white
   }
 
-  .clicked::after{
-    @apply bg-gray-500;
-    content: "";
-    z-index: 3;
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    border-radius: 100%;
-    bottom: 0;
-    left: 50%;
-  }
 
   .oblivion{
     transform-origin: 50% 50%;
@@ -227,6 +316,7 @@
 }
 
 @layer base{
+
 
   body{
     @apply text-gray-700 selection:bg-slate-900 selection:text-white;

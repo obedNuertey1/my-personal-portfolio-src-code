@@ -56,11 +56,22 @@ const ThirdSectionComponent = ():JSX.Element=>(
 
 export default ():JSX.Element =>{
 
+    
     useEffect(()=>{
-        $("#home").addClass("clicked");
+        $("#main-home").addClass("clicked");
+        (()=>{
+            setTimeout(()=>{
+                $("#phone-home-icon").addClass("phone-nav-clicked");
+                
+                setTimeout(()=>{
+                    $("#phone-home-icon").addClass("phone-nav-shows");
+                }, 0);
+            }, 1000);
+        })();
         // reset the scroll position to the top when leaving this page
         return ()=>{
-            $("#home").removeClass("clicked");
+            $("#main-home").removeClass("clicked");
+            $("#phone-home-icon").removeClass("phone-nav-clicked").removeClass("phone-nav-shows");
             window.scrollTo(0, 0);
         };
     }, []);

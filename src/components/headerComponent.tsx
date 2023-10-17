@@ -2,9 +2,22 @@ import HeaderNavLinks from "./partials/headerLinks";
 import largeAvatarImg from "../assets/images/large/Hacker-PNG-Image_2.png";
 
 export default ():JSX.Element => {
+    const headerLinkTexts = {
+        home: "HOME",
+        articles: "ARTICLES",
+        projects: "PROJECTS",
+        work: "WORK"
+    };
+
+    const id = {
+        home: "main-home",
+        articles: "main-articles",
+        projects: "main-projects",
+        work: "main-work"
+    };
     return(
         <>
-        <div className="fixed top-0 w-full z-10 bg-white shadow-md text-sm select-none">
+        <div className="fixed top-0 w-full z-10 bg-white shadow-md text-sm select-none header-wrapper">
             <header data-testid="header" className=" flex justify-between items-center w-full max-w-5xl mx-auto px-3">
                 <div className="header-items flex items-center justify-center" id="profile">
                     <div id="avatar" className="shadow-sm mr-1 avatar-data w-12 object-cover inline-block border-gray-700 border-spacing-0 p-0 border-solid rounded-full">
@@ -16,7 +29,7 @@ export default ():JSX.Element => {
                 </div>
                 <nav className="header-items hidden sm:flex sm:justify-center sm:items-center">
                     <ul className="flex gap-4">
-                        <HeaderNavLinks className="links font-extrabold font-lato align-middle relative py-2" />
+                        <HeaderNavLinks linkTexts={headerLinkTexts} id={id} className="links font-extrabold font-lato align-middle relative py-2" />
                     </ul>
                 </nav>
             </header>

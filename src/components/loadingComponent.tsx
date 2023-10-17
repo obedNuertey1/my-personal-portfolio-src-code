@@ -1,6 +1,14 @@
+import { useEffect } from 'react';
 import { CirclesWithBar } from 'react-loader-spinner';
 
+
 export default ():JSX.Element => {
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+        return ()=>{
+            window.scrollTo(0, 0);
+        }
+    },[])
     return (
         <div id="in-page-loading" data-testid="in-page-loading" className="w-full min-h-screen flex flex-wrap justify-center items-center">
             <div id="load-spinner" className=" stroke-slate-700">

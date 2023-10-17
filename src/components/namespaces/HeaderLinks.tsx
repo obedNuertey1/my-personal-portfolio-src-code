@@ -4,7 +4,7 @@ namespace HeaderLinks{
     export interface IheaderLink<S, N>{
         className?: S;
         id?: N;
-        linkText:S;
+        linkText:S|JSX.Element;
         linkTo: S;
     };
 

@@ -1,12 +1,12 @@
 import HeaderLinks from "../namespaces/HeaderLinks";
 
-export default ({className}:any):JSX.Element => {
+export default ({className, linkTexts, id}:any):JSX.Element => {
 
     const headerLinksArray:HeaderLinks.IheaderLink<string, string>[] = [
-        {className, id:"home", linkText:"HOME", linkTo:"/"},
-        {className, id:"articles", linkText:"ARTICLES", linkTo:"articles"},
-        {className, id:"projects", linkText:"PROJECTS", linkTo:"projects"},
-        {className, id:"work", linkText:"WORK", linkTo:"work"}
+        {className, id:id.home, linkText:linkTexts.home, linkTo:"/"},
+        {className, id:id.articles, linkText:linkTexts.articles, linkTo:"articles"},
+        {className, id:id.projects, linkText:linkTexts.projects, linkTo:"projects"},
+        {className, id:id.work, linkText:linkTexts.work, linkTo:"work"}
     ];
 
     const headerLinksObject = new HeaderLinks.HeaderLinksClass<HeaderLinks.IheaderLink<string, string>>(headerLinksArray);

@@ -7,10 +7,21 @@ import {Helmet} from "react-helmet";
 export default ():JSX.Element => {
 
     useEffect(() => {
-        $("#articles").addClass("clicked");
+        $("#main-articles").addClass("clicked");
+
+        (()=>{
+            setTimeout(()=>{
+                $("#phone-articles-icon").addClass("phone-nav-clicked");
+                
+                setTimeout(()=>{
+                    $("#phone-articles-icon").addClass("phone-nav-shows");
+                }, 0);
+            }, 1000);
+        })();
         // reset the scroll position to the top when leaving this page
         return ()=>{
-            $("#articles").removeClass("clicked");
+            $("#main-articles").removeClass("clicked");
+            $("#phone-articles-icon").removeClass("phone-nav-clicked").removeClass("phone-nav-shows");
             window.scrollTo(0, 0);
         };
       }, []);

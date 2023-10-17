@@ -1,25 +1,27 @@
-function showTextYellowPage(query:string):any{
-    let loading:any = document.getElementById(query);
+function showTextYellowPage(query:string, chunkTimes:number):any{
+    let loading:any = document.querySelector(query);
+    let compiledTime:number = chunkTimes * 6;
+    loading.innerHTML = "<span>Hi There ✋😅!</span>";
     const getInterval:any = setInterval(()=>{
         setTimeout(()=>{
-          loading.innerHTML = "<span id='yellow-page-text'>Hi There ✋😅!</span>";
-          setTimeout(()=>{
-            loading.innerHTML = "<span id='yellow-page-text'>I am Obed</span>";
+                loading.innerHTML = "<span id='yellow-page-text'>I am Obed</span>";
             setTimeout(()=>{
-              loading.innerHTML = "<span id='yellow-page-text'>A Software Engineer👨‍💻👨‍💻</span>";
-              setTimeout(()=>{
-                  loading.innerHTML = "<span id='yellow-page-text'>Welcome to my portfolio website😁😁</span>";
-                  setTimeout(()=>{
-                    loading.innerHTML = "<span id='yellow-page-text'>I am a TypeScript React Frontend Engineer🚀💪</span>";
+                    loading.innerHTML = "<span id='yellow-page-text'>A Software Engineer👨‍💻👨‍💻</span>";
+                setTimeout(()=>{
+                        loading.innerHTML = "<span id='yellow-page-text'>Welcome to my portfolio website😁😁</span>";
                     setTimeout(()=>{
-                        loading.innerHTML = "<span id='yellow-page-text'>I am also a TypeScript Node Backend Engineer🚀💪</span>";
-                    }, 250);
-                  },250);
-              },250);
-            }, 250)
-          },250);
-        },250);
-      }, 1000);
+                            loading.innerHTML = "<span id='yellow-page-text'>I am a TypeScript React Frontend Engineer🚀💪</span>";
+                        setTimeout(()=>{
+                                loading.innerHTML = "<span id='yellow-page-text'>I am also a TypeScript Node Backend Engineer🚀💪</span>";
+                            setTimeout(()=>{
+                                loading.innerHTML = "<span id='yellow-page-text'>Hi There ✋😅!</span>";
+                    }, chunkTimes);
+                  },chunkTimes);
+              },chunkTimes);
+            }, chunkTimes)
+          },chunkTimes);
+        },chunkTimes);
+      }, compiledTime);
 
       return getInterval;
 };
