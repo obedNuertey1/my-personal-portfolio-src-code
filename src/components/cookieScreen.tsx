@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
 import $ from "jquery";
+import waiting from "./functions/waiting";
 
 
 export default ():JSX.Element=>{
@@ -12,14 +13,19 @@ export default ():JSX.Element=>{
         dialog.close();
     },[]);
 
-    const handleAcceptCookie = ():void=>{
+    const handleAcceptCookie = async ()=>{
         document.cookie = "myCookie=obednuerteyportfolioxyz; path=/";
+
+        await waiting(1200);
         $("dialog").hide();
         const dialog:any = document.querySelector("dialog");
         dialog.close();
+        $("dialog").removeClass("dialog-vanish");
     };
 
-    const handleRegectCookie = ():void=>{
+    const handleRegectCookie = async()=>{
+        await waiting(1200);
+        
         $("dialog").hide();
         const dialog:any = document.querySelector("dialog");
         dialog.close();

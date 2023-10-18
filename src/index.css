@@ -5,6 +5,21 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+  dialog {
+    transform-origin: 50% 50%;
+    animation: popexist 500ms linear 0s 1;
+  }
+  @keyframes popexist {
+    0% {
+      transform: scale(0);
+    }
+    75% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   @media screen and (max-width: 640px) {
     dialog {
       max-width: 10ch;

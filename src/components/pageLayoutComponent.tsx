@@ -6,34 +6,41 @@ import {Suspense, useEffect} from "react";
 import PhoneNav from "./phoneNav";
 import CookieScreen from "./cookieScreen";
 import $ from "jquery";
+import waiting from "./functions/waiting";
+
+function randomNumGen(min:number, max:number):number{
+    return Math.floor(Math.random() * (max+1 - min) + min);
+}
 
 
 export default ():JSX.Element=>{
 
+    const getRandomNumber:number = randomNumGen(15, 25);
 
     useEffect(()=>{
 
+        // close and hide the cookie page on mount
         $("dialog").hide();
         const dialog:any = document.querySelector("dialog");
         dialog.close();
 
-        (()=>{
+        (async (num:number)=>{
 
             if(document.cookie != "myCookie=obednuerteyportfolioxyz"){
-                setTimeout(()=>{
-                    setTimeout(()=>{
-                        const dialog:any = document.querySelector("dialog");
-                        dialog.showModal();
-                        $("dialog").show();
-                    }, 3000);
-                }, 3000);
+                // on component mount, wait for a while before showing cookie page
+                await waiting(1000 * num);
+
+                const dialog:any = document.querySelector("dialog");
+                dialog.showModal();
+                $("dialog").show();
             }else{
+                // close and hide cookie page
                 const dialog:any = document.querySelector("dialog");
                 dialog.close();
                 $("dialog").hide();
             }
 
-        })();
+        })(getRandomNumber);
     });
     return (
         <div className="oblivion relative" >
