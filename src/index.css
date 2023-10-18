@@ -5,6 +5,57 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
+  .cookie-green-button:hover, .cookie-red-button:hover {
+    @apply text-white;
+  }
+  .cookie-green-button:not(:hover), .cookie-red-button:not(:hover) {
+    @apply text-inherit;
+  }
+  .cookie-green-button:hover::after {
+    @apply bg-green-600;
+  }
+  .cookie-green-button:not(:hover)::after {
+    @apply bg-green-600;
+  }
+  .cookie-red-button:hover::after {
+    @apply bg-red-600;
+  }
+  .cookie-red-button:not(:hover)::after {
+    @apply bg-red-600;
+  }
+  .cookie-green-button:hover::after, .cookie-red-button:hover::after {
+    @apply border-2 rounded-md min-h-full -z-10;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cookie-anime-button 1000ms linear 0s 1 normal forwards;
+  }
+  .cookie-green-button:not(:hover)::after, .cookie-red-button:not(:hover)::after {
+    @apply border-2 rounded-md min-h-full -z-10;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cookie-anime-button2 1000ms linear 0s 1 normal forwards;
+  }
+  @keyframes cookie-anime-button {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes cookie-anime-button2 {
+    0% {
+      width: 100%;
+    }
+    100% {
+      @apply border-none;
+      width: 0%;
+    }
+  }
   .clicked::after {
     @apply bg-gray-500;
     content: "";

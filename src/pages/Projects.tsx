@@ -8,19 +8,20 @@ export default ():JSX.Element => {
 
     useEffect(()=>{
         $("#main-projects").addClass("clicked");
-        (()=>{
-            setTimeout(()=>{
-                $("#phone-projects-icon").addClass("phone-nav-clicked");
-                
-                setTimeout(()=>{
-                    $("#phone-projects-icon").addClass("phone-nav-shows");
-                }, 0);
-            }, 1000);
-        })();
+        const timeAnime:any = (()=>(
+                            setTimeout(()=>{
+                                $("#phone-projects-icon").addClass("phone-nav-clicked");
+                                
+                                setTimeout(()=>{
+                                    $("#phone-projects-icon").addClass("phone-nav-shows");
+                                }, 0);
+                            }, 1000)
+                        ))();
         // reset the scroll position to the top when leaving this page
         return ()=>{
             $("#main-projects").removeClass("clicked");
             $("#phone-projects-icon").removeClass("phone-nav-clicked").removeClass("phone-nav-shows");
+            clearTimeout(timeAnime);
             window.scrollTo(0, 0);
         };
     }, []);

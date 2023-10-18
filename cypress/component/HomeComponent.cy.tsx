@@ -121,10 +121,10 @@ describe("The third section", ()=>{
     cy.get("[data-testid='home-section']").children(".homepage-section").eq(2).children(".project").eq(1).get("#show-projects").children(".current-projects").as("current-projects");
 
     cy.get("@current-projects").eq(0).within(()=>{
-      cy.get("img").should("exist");
+      cy.get("iframe").should("exist");
     });
     cy.get("@current-projects").eq(1).within(()=>{
-      cy.get("img").should("exist");
+      cy.get("iframe").should("exist");
     });
   });
 
