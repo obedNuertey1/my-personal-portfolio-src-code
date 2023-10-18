@@ -5,7 +5,24 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-  .cookie-green-button:hover, .cookie-red-button:hover {
+  @media screen and (max-width: 640px) {
+    dialog {
+      max-width: 10ch;
+    }
+  }
+  dialog::backdrop {
+    @apply bg-gray-900 opacity-80;
+  }
+  .cookie-green-button, .cookie-red-button {
+    @apply text-inherit;
+  }
+  .cookie-green-button {
+    @apply border-2 border-green-600;
+  }
+  .cookie-red-button {
+    @apply border-2 border-red-600;
+  }
+  .cookie-green-button:hover, .cookie-red-button:hover, .cookie-green-button:active, .cookie-red-button:active {
     @apply text-white;
   }
   .cookie-green-button:not(:hover), .cookie-red-button:not(:hover) {
@@ -20,6 +37,13 @@
   .cookie-red-button:hover::after {
     @apply bg-red-600;
   }
+  .cookie-green-button:active::after, .cookie-red-button:active::after {
+    @apply border-2 rounded-md min-h-full w-full -z-10;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .cookie-red-button:not(:hover)::after {
     @apply bg-red-600;
   }
@@ -32,7 +56,7 @@
     animation: cookie-anime-button 1000ms linear 0s 1 normal forwards;
   }
   .cookie-green-button:not(:hover)::after, .cookie-red-button:not(:hover)::after {
-    @apply border-2 rounded-md min-h-full -z-10;
+    @apply rounded-md min-h-full -z-10;
     content: "";
     position: absolute;
     top: 0;
@@ -49,7 +73,11 @@
   }
   @keyframes cookie-anime-button2 {
     0% {
+      @apply border-2;
       width: 100%;
+    }
+    99% {
+      @apply border-2;
     }
     100% {
       @apply border-none;
@@ -342,9 +370,6 @@
     }
     #show-projects {
       height: 720px;
-    }
-    #home-section {
-      overflow: hidde;
     }
   }
   .caption-link a::before, .caption-link a::after {
