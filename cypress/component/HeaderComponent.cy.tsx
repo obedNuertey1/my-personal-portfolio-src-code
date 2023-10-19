@@ -77,10 +77,10 @@ describe("navbar", ()=>{
       cy.get("nav").within(()=>{
         cy.get("ul").children("li").as("ul-children");
       });
-      cy.get("@ul-children").eq(0).should("contain", "HOME").and("have.attr", "id", "home").and("have.class", "links");
-      cy.get("@ul-children").eq(1).should("contain", "ARTICLES").and("have.attr", "id", "articles").and("have.class", "links");
-      cy.get("@ul-children").eq(2).should("contain", "PROJECTS").and("have.attr", "id", "projects").and("have.class", "links");
-      cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "work").and("have.class", "links");
+      cy.get("@ul-children").eq(0).should("contain", "HOME").and("have.attr", "id", "main-home").and("have.class", "links");
+      cy.get("@ul-children").eq(1).should("contain", "ARTICLES").and("have.attr", "id", "main-articles").and("have.class", "links");
+      cy.get("@ul-children").eq(2).should("contain", "PROJECTS").and("have.attr", "id", "main-projects").and("have.class", "links");
+      cy.get("@ul-children").eq(3).should("contain", "WORK").and("have.attr", "id", "main-work").and("have.class", "links");
     });
   });
 
