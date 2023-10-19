@@ -1,5 +1,6 @@
 import Projects from "../namespaces/Projects";
-import myImage from "../../assets/images/large/capture.jpg";
+import {projectDetails} from "../../assets/images/project-info";
+
 
 export default ():JSX.Element => {
 
@@ -19,18 +20,10 @@ export default ():JSX.Element => {
         visitPage: "visit-page"
     };
 
-    const image: Projects.Iimage<string> = {
-        alt: "coffee",
-        src: myImage
-    };
 
-    const projectsArr:Projects.Iprojects<string>[] = [
-        {captionGistText: "My Project", className, id, getCodeLink:"#", getCodeText: "Get Code", image, visitPageLink: "#", visitPageText: "View Site"},
-        {captionGistText: "My Project", className, id, getCodeLink:"#", getCodeText: "Get Code", image, visitPageLink: "#", visitPageText: "View Site"},
-        {captionGistText: "My Project", className, id, getCodeLink:"#", getCodeText: "Get Code", image, visitPageLink: "#", visitPageText: "View Site"},
-        {captionGistText: "My Project", className, id, getCodeLink:"#", getCodeText: "Get Code", image, visitPageLink: "#", visitPageText: "View Site"},
-        {captionGistText: "My Project", className, id, getCodeLink:"#", getCodeText: "Get Code", image, visitPageLink: "#", visitPageText: "View Site"},
-    ];
+    const projectsArr:Projects.Iprojects<string>[] = projectDetails.map((elem)=>{
+        return {captionGistText: elem.captionGistText, className, id, getCodeLink:elem.getCodeLink, getCodeText: "Get Code", image:elem.image, visitPageLink: elem.visitPageLink, visitPageText: "View Site"}
+    });
 
     const projectsInstance = new Projects.ProjectClass<Projects.Iprojects<string>>(projectsArr);
     const getprojects:Projects.projectJSX = projectsInstance.getProjects();
