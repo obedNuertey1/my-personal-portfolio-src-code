@@ -13,8 +13,12 @@ export default ():JSX.Element=>{
         dialog.close();
     },[]);
 
+    // close and set cookie on clicked
     const handleAcceptCookie = async ()=>{
-        document.cookie = "myCookie=obednuerteyportfolioxyz; path=/";
+        const currentDate:number = new Date().getTime();
+        const newTimeDate:number = currentDate + 10000000; // make the cookie expire the next day
+        const cookieExpDate:string = new Date(newTimeDate).toUTCString();
+        document.cookie = `myCookie=obednuerteyportfolioxyz; expires=${cookieExpDate}; path=/`;
 
         await waiting(1200);
         $("dialog").hide();
@@ -23,6 +27,7 @@ export default ():JSX.Element=>{
         $("dialog").removeClass("dialog-vanish");
     };
 
+    // close cookie page on clicked
     const handleRegectCookie = async()=>{
         await waiting(1200);
         
