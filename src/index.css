@@ -393,11 +393,11 @@
     transition-timing-function: ease-in-out;
   }
   .caption-link:nth-of-type(1) a::before {
-    content: "< ";
+    content: "<";
     color: transparent;
   }
   .caption-link:nth-of-type(1) a::after {
-    content: " />";
+    content: "/>";
     color: transparent;
   }
   .caption-link:nth-of-type(1) a:hover::before {
