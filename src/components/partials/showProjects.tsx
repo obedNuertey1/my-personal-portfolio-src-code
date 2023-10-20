@@ -1,5 +1,5 @@
 import Projects from "../namespaces/Projects";
-import {projectDetails} from "../../assets/images/project-info";
+import {projectDetails} from "../../assets/images/projectDetails";
 
 
 export default ():JSX.Element => {

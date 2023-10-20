@@ -12,6 +12,7 @@ import projectImage11 from "./large/calculator-app.png";
 import projectImage12 from "./large/pomodoro-timer.png";
 import projectImage13 from "./large/markdonw-to-html-generator.png";
 import projectImage14 from "./large/drum-machine.png";
+import projectImage15 from "./large/random-quote-machine.png";
 
 
 export const projectDetails =
@@ -30,4 +31,5 @@ export const projectDetails =
         {captionGistText: "pomodoro timer app", image: {src: projectImage12, alt: "timer"}, visitPageLink: "https://obn-pomodoro-timer.netlify.app/", getCodeLink:""},
         {captionGistText: "markdown to html generator", image: {src: projectImage13, alt: "markdown-editor"}, visitPageLink: "https://markdown-gen.netlify.app/", getCodeLink:""},
         {captionGistText: "drum machine", image: {src: projectImage14, alt: "drum-machine"}, visitPageLink: "https://obn-drum-machine.netlify.app/", getCodeLink:""},
+        {captionGistText: "random quote machine", image: {src: projectImage15, alt: "random quote machine"}, visitPageLink: "https://obn-random-quote-machine.netlify.app/", getCodeLink:""},
     ]
