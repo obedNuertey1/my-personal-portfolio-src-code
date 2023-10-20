@@ -13,6 +13,14 @@ import projectImage12 from "./large/pomodoro-timer.png";
 import projectImage13 from "./large/markdonw-to-html-generator.png";
 import projectImage14 from "./large/drum-machine.png";
 import projectImage15 from "./large/random-quote-machine.png";
+import projectImage16 from "./large/tic-tac-toe.png";
+import projectImage17 from "./large/time-stamp-microservice.png";
+import projectImage18 from "./large/request-header-parser.png";
+import projectImage19 from "./large/url-shortner-microservice.png";
+import projectImage20 from "./large/excercise-tracker.png";
+import projectImage21 from "./large/file-metadata-generator.png";
+import projectImage22 from "./large/american-to-british.png";
+import projectImage23 from "./large/sudoku-solver.png";
 
 
 export const projectDetails =
@@ -32,4 +40,12 @@ export const projectDetails =
         {captionGistText: "markdown to html generator", image: {src: projectImage13, alt: "markdown-editor"}, visitPageLink: "https://markdown-gen.netlify.app/", getCodeLink:""},
         {captionGistText: "drum machine", image: {src: projectImage14, alt: "drum-machine"}, visitPageLink: "https://obn-drum-machine.netlify.app/", getCodeLink:""},
         {captionGistText: "random quote machine", image: {src: projectImage15, alt: "random quote machine"}, visitPageLink: "https://obn-random-quote-machine.netlify.app/", getCodeLink:""},
+        {captionGistText: "tic-tac-toe game", image: {src: projectImage16, alt: "tic-tac-toe"}, visitPageLink: "https://obn-tictactoe.netlify.app/", getCodeLink:""},
+        {captionGistText: "timestamp microservice", image: {src: projectImage17, alt: "timestamp image"}, visitPageLink: "https://obn-timestamp-microservice.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/boilerplate-project-timestamp-1.git"},
+        {captionGistText: "request header parser microservice", image: {src: projectImage18, alt: "request header parser"}, visitPageLink: "https://obn-request-header-parser.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/backend-project-2.git"},
+        {captionGistText: "url shortner microservice", image: {src: projectImage19, alt: "url shortner image"}, visitPageLink: "https://obn-url-shortner.onrender.com", getCodeLink:"https://github.com/obedNuertey1/backend-and-apis-project3.git"},
+        {captionGistText: "excercise tracker microservice", image: {src: projectImage20, alt: "excercise image"}, visitPageLink: "https://obn-excercise-tracker.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/backend-project-4.git"},
+        {captionGistText: "file meta-data microservice", image: {src: projectImage21, alt: "metadata image"}, visitPageLink: "https://obn-file-metadata-generator.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/backend-project-5.git"},
+        {captionGistText: "american to british english translator", image: {src: projectImage22, alt: "translator image"}, visitPageLink: "https://obn-english-to-british-translator.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/english-to-british-translator.git"},
+        {captionGistText: "sudoku solver", image: {src: projectImage23, alt: "sudoku image"}, visitPageLink: "https://obn-sudoku-solver.onrender.com", getCodeLink:"https://github.com/obedNuertey1/sudoku_solver.git"},
     ]
