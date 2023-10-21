@@ -21,11 +21,14 @@ import projectImage20 from "./large/excercise-tracker.png";
 import projectImage21 from "./large/file-metadata-generator.png";
 import projectImage22 from "./large/american-to-british.png";
 import projectImage23 from "./large/sudoku-solver.png";
+import projectImage24 from "./large/personal-library.png";
+import projectImage25 from "./large/issue-tracker.png";
+import projectImage26 from "./large/metric-converter.png";
 
 
 export const projectDetails =
     [
-        {captionGistText: "portfolio", image: {src: projectImage1, alt: "portfolio"}, visitPageLink: "", getCodeLink:""},
+        {captionGistText: "portfolio", image: {src: projectImage1, alt: "portfolio"}, visitPageLink: "", getCodeLink:"https://github.com/obedNuertey1/my-personal-portfolio-src-code.git"},
         {captionGistText: "tailwind coffee menu", image: {src: projectImage2, alt: "coffee menu"}, visitPageLink: "https://maxicoffee.netlify.app/", getCodeLink:"https://github.com/obedNuertey1/coffee-menu-react-typescript-tailwind.git"},
         {captionGistText: "tailwind form", image: {src: projectImage3, alt: "tailwind form"}, visitPageLink: "https://tailwindcss-registration-form.netlify.app", getCodeLink:"https://github.com/obedNuertey1/tailwindcss-registration-form.git"},
         {captionGistText: "tailwind color slider", image: {src: projectImage4, alt: "tailwind color marker"}, visitPageLink: "https://tailwindcss-color-slider.netlify.app/", getCodeLink:"https://github.com/obedNuertey1/css-color-slider.git"},
@@ -48,4 +51,7 @@ export const projectDetails =
         {captionGistText: "file meta-data microservice", image: {src: projectImage21, alt: "metadata image"}, visitPageLink: "https://obn-file-metadata-generator.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/backend-project-5.git"},
         {captionGistText: "american to british english translator", image: {src: projectImage22, alt: "translator image"}, visitPageLink: "https://obn-english-to-british-translator.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/english-to-british-translator.git"},
         {captionGistText: "sudoku solver", image: {src: projectImage23, alt: "sudoku image"}, visitPageLink: "https://obn-sudoku-solver.onrender.com", getCodeLink:"https://github.com/obedNuertey1/sudoku_solver.git"},
+        {captionGistText: "personal library project", image: {src: projectImage24, alt: "personal library"}, visitPageLink: "https://obn-personal-library.onrender.com", getCodeLink:"https://github.com/obedNuertey1/personal_Library_project.git"},
+        {captionGistText: "issue tracker microservice", image: {src: projectImage25, alt: "issue tracker"}, visitPageLink: "https://obn-issue-tracker-microsrvice.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/issue_tracker_fullStack_project.git"},
+        {captionGistText: "metric converter microservice", image: {src: projectImage26, alt: "metric converter"}, visitPageLink: "https://obn-metric-converter.onrender.com/", getCodeLink:"https://github.com/obedNuertey1/metric-converter-project.git"},
     ]
