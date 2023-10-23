@@ -33,7 +33,8 @@ const ArticleSectionComponent = ({articles}:any):JSX.Element=>(
         <div id="article-body" className="article-section">
             <ShowArticles articlesArr={articles} />
         </div>
-        <Link to="/articles" className="article-section font-thin text-gray-600 hover:bg-gray-600 hover:text-white p-1 rounded text-sm select-none more"><span className="mr-1 ">more</span> <FontAwesomeIcon icon={faArrowRight} /></Link>
+        {/* <Link to="/articles" className="article-section font-thin text-gray-600 hover:bg-gray-600 hover:text-white p-1 rounded text-sm select-none more"><span className="mr-1 ">more</span> <FontAwesomeIcon icon={faArrowRight} /></Link> */}
+        <a href="/articles" className="article-section font-thin text-gray-600 hover:bg-gray-600 hover:text-white p-1 rounded text-sm select-none more"><span className="mr-1 ">more</span> <FontAwesomeIcon icon={faArrowRight} /></a>
     </section>
 );
 
@@ -50,7 +51,8 @@ const ProjectsSectionComponent = ():JSX.Element=>(
                 <iframe src="https://obn-pomodoro-timer.netlify.app/" className="rounded-md shadow-md" title="pomodoro" allowFullScreen frameBorder={0} sandbox="allow-same-origin allow-scripts"></iframe>
             </div>
         </div>
-        <Link to="/projects" className="article-section font-thin text-gray-600 hover:shadow-md hover:bg-gray-600 hover:text-white p-1 rounded text-sm select-none more"><span className="mr-1">more</span> <FontAwesomeIcon icon={faArrowRight} /></Link>
+        {/* <Link to="/projects" className="article-section font-thin text-gray-600 hover:shadow-md hover:bg-gray-600 hover:text-white p-1 rounded text-sm select-none more"><span className="mr-1">more</span> <FontAwesomeIcon icon={faArrowRight} /></Link> */}
+        <a href="/projects" className="article-section font-thin text-gray-600 hover:shadow-md hover:bg-gray-600 hover:text-white p-1 rounded text-sm select-none more"><span className="mr-1">more</span> <FontAwesomeIcon icon={faArrowRight} /></a>
     </section>
 );
 
