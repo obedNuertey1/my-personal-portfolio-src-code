@@ -1,6 +1,6 @@
 function showTextYellowPage(query:string, chunkTimes:number):any{
     let loading:any = document.querySelector(query);
-    let compiledTime:number = chunkTimes * 6;
+    let compiledTime:number = chunkTimes * 7;
     loading.innerHTML = '<span class="ml-6">Hi There ✋😅!</span>';
     const getInterval:any = setInterval(()=>{
         setTimeout(()=>{
@@ -12,9 +12,12 @@ function showTextYellowPage(query:string, chunkTimes:number):any{
                     setTimeout(()=>{
                             loading.innerHTML = "<span id='yellow-page-text'>I am a TypeScript React Frontend Engineer🚀💪</span>";
                         setTimeout(()=>{
-                                loading.innerHTML = "<span id='yellow-page-text'>I am also a TypeScript Node Backend Engineer🚀💪</span>";
-                            setTimeout(()=>{
-                                loading.innerHTML = '<span id="yellow-page-text" class="ml-6">Hi There ✋😅!</span>';
+                                loading.innerHTML = "<span id='yellow-page-text'>I am a TypeScript Node Backend Engineer🚀💪</span>";
+                                setTimeout(()=>{
+                                        loading.innerHTML = "<span id='yellow-page-text'>I am also a Software QA engineer💪😁</span>";
+                                        setTimeout(()=>{
+                                                loading.innerHTML = '<span id="yellow-page-text" class="ml-6">Hi There ✋😅!</span>';
+                      }, chunkTimes);
                     }, chunkTimes);
                   },chunkTimes);
               },chunkTimes);

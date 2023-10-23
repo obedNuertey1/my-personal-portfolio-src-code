@@ -4,7 +4,7 @@ import ParentSplashScreen from "./components/parentSplashScreen";
 import waiting from "./components/functions/waiting";
 
 const Routes:any = lazy(async ():Promise<{default: ComponentType<JSX.Element>}>=>{
-  await waiting(66000);
+  await waiting(76000);
   return await import("./Routes");
 })
 
