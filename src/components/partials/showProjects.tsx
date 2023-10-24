@@ -22,7 +22,7 @@ export default ():JSX.Element => {
 
 
     const projectsArr:Projects.Iprojects<string>[] = projectDetails.map((elem)=>{
-        return {captionGistText: elem.captionGistText, className, id, getCodeLink:elem.getCodeLink, getCodeText: "Get Code", image:elem.image, visitPageLink: elem.visitPageLink, visitPageText: "View Site"}
+        return {captionGistText: elem.captionGistText, className, id, getCodeLink:elem.getCodeLink, getCodeText: "Get Code", image:elem.image, visitPageLink: elem.visitPageLink, visitPageText: "WebSite"}
     });
 
     const projectsInstance = new Projects.ProjectClass<Projects.Iprojects<string>>(projectsArr);
