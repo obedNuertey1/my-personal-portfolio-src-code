@@ -8,6 +8,12 @@
 
 @layer utilities{
 
+  *, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   .more:hover{
     word-spacing: 12px;
   }
@@ -436,6 +442,11 @@
   body{
     @apply text-gray-700 selection:bg-slate-900 selection:text-white;
     scroll-padding-right: 10px;
+  }
+  *, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   .current-projects{
     display: inline-block;

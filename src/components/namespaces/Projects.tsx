@@ -46,8 +46,8 @@ namespace Projects{
                         <img className={elem.className.img} src={elem.image.src} alt={elem.image.alt} loading="lazy" />
                         <figcaption className={elem.className.figcaption}>
                             <div className={elem.className.captionLinks} id={elem.id.captionLinks}>
-                                <div className={elem.className.captionLink} id={elem.id.getCode}><a href={elem.getCodeLink} rel="noreferrer">{elem.getCodeText}</a></div>
-                                <div className={elem.className.captionLink} id={elem.id.visitPage}><a href={elem.visitPageLink} rel="noreferrer">{elem.visitPageText}</a></div>
+                                <div className={elem.className.captionLink} id={elem.id.getCode}><a href={elem.getCodeLink} rel="noreferrer" target="_blank">{elem.getCodeText}</a></div>
+                                <div className={elem.className.captionLink} id={elem.id.visitPage}><a href={elem.visitPageLink} rel="noreferrer" target="_blank">{elem.visitPageText}</a></div>
                             </div>
                             <div className={elem.className.captionGist} id={elem.id.captionGist}>{elem.captionGistText}</div>
                         </figcaption>
