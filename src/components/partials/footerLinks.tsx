@@ -1,5 +1,5 @@
 import FooterLinks from "../namespaces/FooterLinks";
-import resume from "../../assets/text-and-other-files/obeds-resume.pdf";
+import resume from "../../assets/text-and-other-files/Obed_Nuertey_Resume.pdf";
 
 export default ({className}:FooterLinks.IfooterLink<string, number>):JSX.Element=>{
 
