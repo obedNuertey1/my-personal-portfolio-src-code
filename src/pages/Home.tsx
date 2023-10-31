@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import $ from "jquery";
 import { Helmet } from "react-helmet";
+/**
+ * arrow functions are used for jsx components whilst normal functions are used to perform actions that any normal function will perform
+ */
 
 function handleRightIframeNav():void{
     let iframeWrapper:any = document.getElementById("show-projects");
