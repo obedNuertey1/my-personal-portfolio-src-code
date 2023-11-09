@@ -24,10 +24,10 @@ describe('FooterComponent.cy.tsx', () => {
     });
   });
 
-  it("there should be 4 list items", ()=>{
+  it("there should be 5 list items", ()=>{
     cy.get('address').within(()=>{
       cy.get('ul').find('.social-list').should(($socialList:any):void=>{
-        expect($socialList.length).to.eq(4);
+        expect($socialList.length).to.eq(5);
       });
     });
   });

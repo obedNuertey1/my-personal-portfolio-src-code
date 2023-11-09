@@ -8,6 +8,10 @@
 
 @layer utilities{
 
+  .more:hover{
+    word-spacing: 12px;
+  }
+
   dialog{
     transform-origin: 50% 50%;
     animation: popexist 500ms linear 0s 1;

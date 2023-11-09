@@ -6,6 +6,7 @@ namespace FooterLinks{
         id?: T|U;
         target?: T;
         linkText?: T|U;
+        download?: T;
     }
 
     export type footerLinkJSX = JSX.Element[];
@@ -19,7 +20,7 @@ namespace FooterLinks{
 
         public getLinks():footerLinkJSX{
             return this.linksArray.map((elem:V):JSX.Element=>{
-                return(<li><a className={elem.className} href={elem.href} rel={elem.rel} target={elem.target}>{elem.linkText}</a></li>);
+                return(<li><a className={elem.className} href={elem.href} rel={elem.rel} target={elem.target} download={elem.download}>{elem.linkText}</a></li>);
             });
         }
     };

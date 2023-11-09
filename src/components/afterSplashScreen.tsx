@@ -1,63 +1,6 @@
-// import Typist from "react-typist";
 import loadingAnimation from "./functions/loadingText";
 import {useEffect} from "react";
 import showTextYellowPage from "./functions/showTextYellowPage";
-
-
-// let typingText:string[] = [
-//     "Hi There ✋😅!",
-//     "I am Obed",
-//     "A Software Engineer👨‍💻👨‍💻",
-//     "Welcome to my portfolio website😁😁",
-//     "I am a TypeScript React Frontend Engineer🚀💪",
-//     "I am also a TypeScript Node Backend Engineer🚀💪",
-// ];
-
-// const TypingComponent = ():JSX.Element => {
-//     useEffect(()=>{
-//         return ()=>{};
-//     })
-
-//     return (
-//         <>
-//                 <Typist 
-//                 cursor={
-//                     {
-//                         show: true,
-//                         blink: true,
-//                         element: '|',
-//                         hideWhenDone: true,
-//                         hideWhenDoneDelay: 1000,
-//                     }
-//                 }
-//                 className="cursor-vertical-text"
-//                 stdTypingDelay={100}
-//                 avgTypingDelay={100}
-//                 >
-//                     <Typist.Delay ms={4000} />
-//                     <span id={`typing-text-0`}>{typingText[0]}</span>
-//                     <Typist.Backspace count={typingText[0].length} delay={2000} />
-//                     <Typist.Delay ms={500} />
-//                     <span id={`typing-text-1`}>{typingText[1]}</span>
-//                     <Typist.Backspace count={typingText[1].length} delay={2000} />
-//                     <Typist.Delay ms={500} />
-//                     <span id={`typing-text-2`}>{typingText[2]}</span>
-//                     <Typist.Backspace count={typingText[2].length} delay={2000} />
-//                     <Typist.Delay ms={500} />
-//                     <span id={`typing-text-3`}>{typingText[3]}</span>
-//                     <Typist.Backspace count={typingText[3].length} delay={2000} />
-//                     <Typist.Delay ms={500} />
-//                     <span id={`typing-text-4`}>{typingText[4]}</span>
-//                     <Typist.Backspace count={typingText[4].length} delay={2000} />
-//                     <Typist.Delay ms={500} />
-//                     <span id={`typing-text-5`}>{typingText[5]}</span>
-//                     <Typist.Backspace count={typingText[5].length} delay={2000} />
-//                     <Typist.Delay ms={500} />
-//                 </Typist>
-//         </>
-//     );
-// };
-
 
 
 export default ():JSX.Element => {
