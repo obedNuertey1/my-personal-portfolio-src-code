@@ -14,7 +14,7 @@ Welcome to my portfolio source code ✋😅
 
 
 ## Starting the Development Server
-You just do a ```npm run dev``` in the projects repository that is after you do ```npm install```
+You just do a ```npm run dev``` in the projects repository that is after you do ```npm install```.
 
 ## Running Tests
 Note all Software Tests can be located in the directory **cypress/compoent**
